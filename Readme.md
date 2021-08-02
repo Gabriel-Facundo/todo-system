@@ -2,7 +2,7 @@
 React Avançado
 
 ## Objetivo do desafio
-Construir uma aplicação completa utilizando React
+Construir uma aplicação completa utilizando React, esta aplicação dese ter um sistema de autenticação e apresentar dados em uma rela de dashboard.
 
 ## O Desafio
 - [ ] Crie uma aplicação sem utilizar o CRA, com webpack
@@ -34,3 +34,8 @@ Construir uma aplicação completa utilizando React
 - Compartilhe o link do projeto com o seu mentor
 
 ## Critérios de avaliação
+- A aplicação deve estar funcionando de acordo com o que foi solicitado
+- Organização do código
+- Utilize inglês para nomear variáveis, funções etc.
+- Boa indentação do código
+    - Use ferramentas com o [https://prettier.io/](https://prettier.io/), instale plugins no seu editor de código.
