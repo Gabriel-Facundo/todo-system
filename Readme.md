@@ -5,28 +5,41 @@ React Avançado
 Construir uma aplicação completa utilizando React, esta aplicação dese ter um sistema de autenticação e apresentar dados em uma rela de dashboard.
 
 ## O Desafio
-- [ ] Crie uma aplicação sem utilizar o CRA, com webpack
-    - [ ] Utilize o testing library para testar os componentes
-    - [ ] Utilize o react router dom para apresentação das paginas da aplicação
-        - `/auth`: Página de autenticação
-        - `/dashboard`: Página inicial para quem está autenticado
-        - `/not-found`: Página que deve ser redirecionado todos acessos onde não tenham uma roda definida
-        - `/not-authorized`: Página que deve ser redirecionado todos acessos que não possuem o token
-    - [ ] `/auth`
-        - Login com email e senha
-        - O serviço deve ser falso, apenas retorna um token para qualquer tentativa
-        - Armazene esse token de forma que não perca a informação mesmo que o usuário recarregue a página
-    - [ ] `/dashboard`
-        - Apenas usuários autenticados podem acessar essa página
-    - [ ] Crie um componente de aprovação de comentários
-        - Uma lista com comentários, utilize um mock para simular dados reais.
-    - [ ] Crie uma componente de de busca para filtrar os comentários feitos.
-    - [ ] Crie um componente de ações para aprovar ou reprovar um comentário.
-        - Este componente vai ser renderizado em cada comentário feito.
-    - [ ] Crie um hook de serviço para chamar um API (fictícia) de comentários
-        - Precisa ter uma função que retorna a lista de comentários filtrados
-        - Precisa ter uma que aprove o comentário
-        - Precisa ter uma função que reprove o comentário
+- [ ] Crie uma aplicação sem utilizar o CRA, com webpack e typescript.
+- [ ] Utilize o [testing-library](https://testing-library.com/) para testar os componentes.
+- [ ] Utilize o [react-router-dom](https://reactrouter.com/web/guides/quick-start) para apresentação das paginas da aplicação.
+    - `/auth`: Página de autenticação.
+    - `/todo`: Página inicial para quem está autenticado.
+    - `/not-found`: Página que deve ser redirecionado todos acessos onde não tenham uma roda definida.
+    - `/not-authorized`: Página que deve ser redirecionado todos acessos que não possuem o token.
+- [ ] Rota `/auth`.
+    - Login com email e senha.
+    - O serviço deve ser falso, apenas retorna um token para qualquer tentativa.
+    - Armazene esse token de forma que não perca a informação mesmo que o usuário recarregue a página.
+- [ ] Rota `/todo`.
+    - Apenas usuários autenticados podem acessar essa página.
+- [ ] Crie uma API de mock utilizando o [https://mockapi.io/](https://mockapi.io/).
+    - [ ] Crie um recurso para seu projeto como `todo`.
+    - [ ] Os campos desse recurso devem ser.
+        - Titulo com o tipo Sentence.
+        - Data de criação com o tipo Recent.
+        - Status com o tipo String.
+- [ ] Crie um componente para listagem do `todo`.
+    - Este componente deve ser apresentado na roda `/todo`.
+    - Cada elemento da lista (atividade) deve ficar sobrelinhado e com a cor do texto mais clara.
+- [ ] Crie um componente para adicionar um uma atividade no `todo`.
+    - Um campo de texto junto de um botão para confirmar a inclusão da atividade.
+    - O campo de texto deve limitar o tamanho do texto em 100 caracteres.
+- [ ] Crie um componente para alterar a atividade para concluído `todo`.
+    - Este componente vai deve ser mostrado em cada atividade apresentada na lista.
+- [ ] Crie um hook de serviço para chamar sua API criada anteriormente.
+    - Busque todas os resultados da sua API.
+    - Adicione uma atividade nova na API.
+    - Altere a atividade para status como concluído.
+- [ ] Rota `/not-found`.
+    - Mostra uma mensagem de que o conteúdo não foi encontrado.
+- [ ] Rota `/not-authorized`.
+    - Mostra uma mensagem de o acesso não foi autorizado.
 
 ## Instruções para Realização do Desafio
 - Faça um fork desse repositório para a sua conta
@@ -34,8 +47,22 @@ Construir uma aplicação completa utilizando React, esta aplicação dese ter u
 - Compartilhe o link do projeto com o seu mentor
 
 ## Critérios de avaliação
-- A aplicação deve estar funcionando de acordo com o que foi solicitado
-- Organização do código
-- Utilize inglês para nomear variáveis, funções etc.
-- Boa indentação do código
-    - Use ferramentas com o [https://prettier.io/](https://prettier.io/), instale plugins no seu editor de código.
+- A aplicação esta rodando?
+- O recursos implementados correspondem ao que foi solicitado no desafio?
+- A API foi criada?
+- A API response as chamadas feitas pelo aplicação?
+- Você consegue ver a lista de atividades na página `/todo`?
+- Você consegue adicionar uma nova atividade?
+- Você consegue marcar uma atividade como concluída?
+- Quando você acessa uma rota que não existe você ve uma mensagem amigável?
+- Quando você acessa uma rota antes de se autenticar você é informado que não possui autorização?
+- Depois de autenticado você consegue acessar a rota `/todo`?
+- Nessa roda você ve um campo de text com um botão logo acima de uma lista de atividades?
+- Você consegue inserir um texto e ao apertar o botão que tem ao lado esse texto aparece na lista abaixo?
+- O tamanho máximo do texto inserido é 200 caracteres?
+- Na lista cada atividade possui um botão que ao clicar nele o texto aparece em sobrelinhado?
+- O código apresentado está bem organizado?
+- A indentação do código esta padronizada?
+- O projeto possui um Readme com instruções para que essa aplicação rode?
+- Os testes unitário estão rodando e sem erros?
+- Os testes cobre ao menos 30% de código do projeto?
