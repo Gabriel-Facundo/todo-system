@@ -2,7 +2,7 @@
 React Avançado
 
 ## Objetivo do desafio
-Construir uma aplicação completa utilizando React, esta aplicação dese ter um sistema de autenticação e apresentar dados em uma rela de dashboard.
+Este desafio vamos construir uma aplicação completa utilizando React, esta aplicação deve ter um sistema de autenticação e uma area restrita onde terá componente de lista de atividades.
 
 ## O Desafio
 - [ ] Crie uma aplicação sem utilizar o CRA, com webpack e typescript.
@@ -40,6 +40,8 @@ Construir uma aplicação completa utilizando React, esta aplicação dese ter u
     - Mostra uma mensagem de que o conteúdo não foi encontrado.
 - [ ] Rota `/not-authorized`.
     - Mostra uma mensagem de o acesso não foi autorizado.
+- [ ] Crie um script que gere o os arquivos finalizado dessa aplicação, como o `npm run build` da aplicação que fizemos utilizando o CRA.
+    - Documente esse processo de build.
 
 ## Instruções para Realização do Desafio
 - Faça um fork desse repositório para a sua conta
@@ -66,3 +68,4 @@ Construir uma aplicação completa utilizando React, esta aplicação dese ter u
 - O projeto possui um Readme com instruções para que essa aplicação rode?
 - Os testes unitário estão rodando e sem erros?
 - Os testes cobre ao menos 30% de código do projeto?
+- É possível gerar o bundle dessa aplicação?
