@@ -48,6 +48,10 @@ Este desafio vamos construir uma aplicação completa utilizando React, esta apl
 - Implemente a sua solução conforme solicitado
 - Compartilhe o link do projeto com o seu mentor
 
+# Bonus
+- Configure o jest para restar apendas componentes de apresentação
+- Atinja 70% de cobertura de testes nesses componentes
+
 ## Critérios de avaliação
 - A aplicação esta rodando?
 - O recursos implementados correspondem ao que foi solicitado no desafio?
@@ -69,3 +73,5 @@ Este desafio vamos construir uma aplicação completa utilizando React, esta apl
 - Os testes unitário estão rodando e sem erros?
 - Os testes cobre ao menos 30% de código do projeto?
 - É possível gerar o bundle dessa aplicação?
+- [BONUS] A cobertura de teste está apenas nos componentes de apresentação?
+- [BONUS] Estes testes atingem 70% ou mais de cobertura?
