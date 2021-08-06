@@ -5,7 +5,7 @@ React Avançado
 Este desafio vamos construir uma aplicação completa utilizando React, esta aplicação deve ter um sistema de autenticação e uma area restrita onde terá componente de lista de atividades.
 
 ## O Desafio
-- [ ] Crie uma aplicação sem utilizar o CRA, com webpack e typescript.
+- [ ] Crie uma aplicação uma nova em React (Veja bonus).
 - [ ] Utilize o [testing-library](https://testing-library.com/) para testar os componentes.
 - [ ] Utilize o [react-router-dom](https://reactrouter.com/web/guides/quick-start) para apresentação das paginas da aplicação.
     - `/auth`: Página de autenticação.
@@ -44,9 +44,10 @@ Este desafio vamos construir uma aplicação completa utilizando React, esta apl
     - Documente esse processo de build.
 
 ## Instruções para Realização do Desafio
-- Faça um fork desse repositório para a sua conta
-- Implemente a sua solução conforme solicitado
-- Compartilhe o link do projeto com o seu mentor
+- Crie a aplicação sem usar o CRA, com webpack e typescript.
+- Faça um fork desse repositório para a sua conta.
+- Implemente a sua solução conforme solicitado.
+- Compartilhe o link do projeto com o seu mentor.
 
 # Bonus
 - Configure o jest para restar apendas componentes de apresentação
