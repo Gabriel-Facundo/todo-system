@@ -42,6 +42,7 @@ Neste desafio vamos construir uma aplicação completa utilizando React, esta ap
     - Mostra uma mensagem de que o acesso não foi autorizado.
 - [ ] Crie um script que gere o os arquivos finalizado dessa aplicação, como o `npm run build` da aplicação que fizemos utilizando o CRA.
     - Documente esse processo de build.
+- [ ] Faça um "readme" com instruções de como o aplicativo deve ser executado.
 
 ## Instruções para Realização do Desafio
 - Crie a aplicação sem usar o CRA, com webpack e typescript.
@@ -54,6 +55,7 @@ Neste desafio vamos construir uma aplicação completa utilizando React, esta ap
 - Atinja 70% de cobertura de testes nesses componentes
 
 ## Critérios de avaliação
+- Existe um documento "Readme" no projeto com informações deste desafio?
 - A aplicação está rodando?
 - Os recursos implementados correspondem ao que foi solicitado no desafio?
 - A API foi criada?
