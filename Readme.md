@@ -24,38 +24,46 @@ Neste desafio vamos construir uma aplicação completa utilizando React, esta ap
         - Título com o tipo Sentence.
         - Data de criação com o tipo Recent.
         - Status com o tipo String.
-- [ ] Crie um componente para listagem do `todo`.
-    - Este componente deve ser apresentado na roda `/todo`.
-    - Cada elemento da lista (atividade) deve ficar rasurado e com a cor do texto mais clara.
-- [ ] Crie um componente para adicionar um uma atividade no `todo`.
-    - Um campo de texto junto de um botão para confirmar a inclusão da atividade.
-    - O campo de texto deve limitar o tamanho do texto em 100 caracteres.
-- [ ] Crie um componente para alterar a atividade para concluído `todo`.
-    - Este componente deve ser mostrado em cada atividade apresentada na lista.
+- [ ] Insira os componentes feitos nos desafios 1 e 2 neste projeto.
+    - [ ] Este componente deve ser apresentado na roda `/todo`.
 - [ ] Crie um hook de serviço para chamar sua API criada anteriormente.
-    - Busque todos os resultados da sua API.
-    - Adicione uma atividade nova na API.
-    - Altere a atividade para status como concluído.
+    - [ ] Integre o serviço com o componente através da camada de 'container', um componente que deve centralizar todo o estado para esta parte da aplicação.
+    - [ ] Busque todos os resultados da sua API.
+    - [ ] Adicione uma atividade nova na API.
+    - [ ] Altere a atividade para status como concluído.
 - [ ] Rota `/not-found`.
-    - Mostra uma mensagem de que o conteúdo não foi encontrado.
+    - [ ] Mostra uma mensagem de que o conteúdo não foi encontrado.
 - [ ] Rota `/not-authorized`.
-    - Mostra uma mensagem de que o acesso não foi autorizado.
+    - [ ] Mostra uma mensagem de que o acesso não foi autorizado.
 - [ ] Crie um script que gere o os arquivos finalizado dessa aplicação, como o `npm run build` da aplicação que fizemos utilizando o CRA.
-    - Documente esse processo de build.
+    - [ ] Documente esse processo de build no readme.
 - [ ] Faça um "readme" com instruções de como o aplicativo deve ser executado.
 
 ## Instruções para Realização do Desafio
-- Crie a aplicação sem usar o CRA, com webpack e typescript.
+- Siga as mesmas instruções que foram passada no desafio 1, quando a nomenclatura dos arquivos e organização das pastas.
+- Reaproveite o código criado no desafio 1 e 2.
+- Organize seu projeto assim como o exemplo [deste projeto](./examples).
 - Faça um fork do repositório para a sua conta.
 - Implemente a sua solução conforme solicitado.
 - Compartilhe o link do projeto com o seu mentor.
 
 # Bônus
-- Configure o jest para restar apenas componentes de apresentação
-- Atinja 70% de cobertura de testes nesses componentes
+- Crie a aplicação sem usar o CRA, com webpack e typescript.
+- Configure o Jest para testar apenas componentes de apresentação.
+- Atinja 70% de cobertura de testes nesses componentes.
 
 ## Critérios de avaliação
 - Existe um documento "Readme" no projeto com informações deste desafio?
+- Os componentes estão em arquivos separados?
+- Cada componente possui uma pasta?
+- O nome do arquivo é o mesmo do componente?
+- O nome dos componentes estão em PascalCase?
+- Cada componente possui um teste separado?
+- Os arquivos de teste possuem a extensão `.spec.ts`?
+- Cada arquivo de teste possui um `describe`?
+- Cada teste possui apenas um `assertion`?
+- A indentação do código está padronizada?
+- O projeto esta separada em pastas assim como mostra o [exemplo](./examples).
 - A aplicação está rodando?
 - Os recursos implementados correspondem ao que foi solicitado no desafio?
 - A API foi criada?
@@ -68,13 +76,11 @@ Neste desafio vamos construir uma aplicação completa utilizando React, esta ap
 - Depois de autenticado você consegue acessar a rota `/todo`?
 - Nessa rota você vê um campo de texto com um botão logo acima de uma lista de atividades?
 - Você consegue inserir um texto e ao apertar o botão que tem ao lado esse texto aparece na lista abaixo?
-- O tamanho máximo do texto inserido é 200 caracteres?
-- Na lista, cada atividade possui um botão que ao clicar nele o texto aparece em rasurado?
-- O código apresentado está bem organizado?
-- A indentação do código está padronizada?
+- Na lista, cada atividade possui um checkbox que ao seleciona-lo o texto aparece em rasurado?
 - O projeto possui um Readme com instruções para que essa aplicação rode?
 - Os testes unitários estão rodando e sem erros?
 - Os testes cobrem ao menos 30% de código do projeto?
 - É possível gerar o bundle dessa aplicação?
+- [BÔNUS] O projeto em react foi feito sem o CRA? Apenas webpack com typescript.
 - [BÔNUS] A cobertura de teste está apenas nos componentes de apresentação?
 - [BÔNUS] Estes testes atingem 70% ou mais de cobertura?
