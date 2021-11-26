@@ -1,3 +1,12 @@
-body {
-    background-image: url('/src/images/hero-home-bg.jpg');
+@keyframes wronged {
+    0%   {left:0px; background-color: red;}
+    25%  {left:5px; background-color: red;}
+    50%  {left: -5px; background-color: red;}
+    75%  {left:5px; background-color: red;}
+    100% {left: 0px; background-color: '#A43600';}
+}
+
+.wronged {
+    animation-name: wronged;
+    animation-duration: 0.5s;
 }

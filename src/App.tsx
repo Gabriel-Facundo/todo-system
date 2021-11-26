@@ -1,17 +1,24 @@
-import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import {HOME, LOGIN} from 'routes'
-import Home from 'pages/home'
-import Login from 'pages/login'
+import React, {lazy, Suspense} from 'react';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {TODO, LOGIN} from 'routes'
+import {LinearProgress} from '@material-ui/core'
 
+const Login = lazy(() => import('pages/login'))
+const Todos = lazy(() => import('pages/todos'))
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch >
-        <Route path={LOGIN} component={Login}/>
-        <Route path={HOME} component={Home}/>
-      </Switch>
+      <Suspense fallback={<LinearProgress/>}>
+        <Switch >
+
+          <Route path={LOGIN} component={Login}/>
+          <Route path={TODO} component={Todos}/>
+
+          <Route><Redirect to={LOGIN}/></Route>
+          
+        </Switch>
+      </Suspense>
     </BrowserRouter>
   );
 }
