@@ -9,12 +9,12 @@ function AuthProvider ({children}: {children: ReactNode}) {
     const [failLogin, setfailLogin] = useState('');
     
     useEffect(() => {
-      let isAuthenticated = (localStorage.getItem('isAuthenticated') === 'true');
-      setToken(isAuthenticated);
-      if(isAuthenticated) return
       if(token) {
         localStorage.setItem('isAuthenticated', JSON.stringify(token));
       }
+      let isAuthenticated = (localStorage.getItem('isAuthenticated') === 'true');
+      setToken(isAuthenticated);
+      if(isAuthenticated) return
     }, [token])
 
     const login = (email: string, password: string) => {

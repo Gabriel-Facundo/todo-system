@@ -1,13 +1,16 @@
-import { Grid, TextField, Typography, Paper, Button as MaterialButton} from '@material-ui/core'
-import {ReactComponent as MainLogo} from './images/logo-southsystem.svg'
-import styled from 'styled-components'
 import React, {useContext, useState} from 'react'
-import img from './images/hero-home-bg-cutted.jpg'
-import { AuthContext } from 'contexts'
 import { Redirect } from 'react-router'
-import {TODO} from 'routes'
+
+import { Grid, TextField, Typography, Button as MaterialButton} from '@material-ui/core'
+import {ReactComponent as MainLogo} from 'shared//images/logo-southsystem.svg'
+import { FullDiv, CenterGrid, CenterGridItem, CenterPaper } from 'shared'
+import img from 'shared/images/hero-home-bg-cutted.jpg'
 import './login.css'
 
+import { AuthContext } from 'contexts'
+import styled from 'styled-components'
+
+import {TODO} from 'routes'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -24,15 +27,12 @@ const Login = () => {
     }
 
     return (
-        <FullDiv>
+        <FullDiv img={img}>
             {token && <Redirect to={TODO} />}
-            <MainGrid >
+            <CenterGrid >
                 <MainLogo style={{position: 'absolute', paddingBottom:"270px"}}/>
-                <Grid item>
-                    <Grid container>
-                        <Grid item xs={4}></Grid>
-                        <Grid item>
-                            <Paper style={{borderRadius: '10px', backgroundColor: '#F3814A', marginTop: '80px'}} elevation={24} >
+                    <CenterGridItem>
+                            <CenterPaper color={'#F3814A'}>
                                 <Typography style={{paddingTop: '40px'}}> 
                                     Salve salve meu patrão<br /> 
                                     vamos logar no sistema<br /> 
@@ -61,37 +61,16 @@ const Login = () => {
                                 >
                                     Entrar 🚀
                                 </Button>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </MainGrid>
+                            </CenterPaper>
+                </CenterGridItem>
+            </CenterGrid>
         </FullDiv>
     )
 }
-
-const MainGrid = styled(Grid).attrs({
-    container: true,
-    justifyContent: 'center',
-    alignItems: 'center',
-})`
-    display: flex; 
-    flex-direction: column;
-    text-align: center;
-    min-height: 95vh;
-`
 
 const Button = styled(MaterialButton).attrs({
     variant: 'contained'
 })`
 `
-const FullDiv = styled.div`
-    height: 100%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    background-image: url(${img});
-`
+
 export default Login
