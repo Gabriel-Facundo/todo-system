@@ -7,3 +7,10 @@ Por enquanto, a metodologia que eu vou fazer quanto aos "Todos" será a seguinte
     fazer menos chamadas para a API (o que, levando em consideração uma situação que eu tenha 100000000000 todos, seria uma eternidade para fazer qualquer coisa se ele sempre precisasse chamar a API para atualizar os dados no front, ele sempre vai precisar chamar a API para salvar no servidor), apesar de ser mais "doloroso" ao codar.
 
     Outra opção seria: Ao adicionar o Todo ou clicar em "Completar" ou "Descompletar", ele faria a atualização na API e já chamasse a API novamente para re renderizar o conteúdo atualizado, essa forma seria mais fácil, mas cai no problema que eu situei acima, se eu tiver 100000000 todos (eu sei que não é possível, pois o MockAPI só permite 100, mas é uma situação que poderia ser real), cada clique seria uma eternidade dessa forma, pois além de um post/put, teria um get.
+
+Todos 
+ -Teste de componente
+ -Criar mensagens de erro no todoUtils
+ -Estilizar a página de todo
+ -Não deixar salvar todo em branco
+ -Formatação de data

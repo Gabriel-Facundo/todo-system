@@ -2,7 +2,7 @@ interface ITodoInterface {
     title: string,
     createdAt: Date,
     status: string,
-    id: number
+    id?: number
 }
 
 export default ITodoInterface;

@@ -3,12 +3,52 @@ import ITodoInterface from '../../../interfaces/ITodoInterface'
 
 export function todosUtil() {
     async function getTodos() {
-        let todos: ITodoInterface[] = [];
+        let responseServer: ITodoInterface[] = [];
         await TODO_API.get("api/v1/todos")
-                .then((response) => todos = response.data);
-        return todos;
+                .then((response) => responseServer = response.data)
+                .catch(() => {});
+        return responseServer;
     }
 
-    return {getTodos}
+    async function postTodo(todo: ITodoInterface, allTodos: ITodoInterface[]) {
+        let responseServer: ITodoInterface[] = [];
+        await TODO_API.post("api/v1/todos", todo)
+                    .then((response) => {
+                        responseServer = allTodos.concat(response.data);
+                        }
+                    )
+                    .catch(() => {
+                        return responseServer = allTodos
+                    })
+        return responseServer
+    }
+
+    async function changeTodo(todo:ITodoInterface, allTodos:ITodoInterface[]) {
+        let responseServer: ITodoInterface[] = [];
+        todo.status = todo.status === "Completed" ? "Uncompleted" : "Completed"
+        await TODO_API.put(`api/v1/todos/${todo.id}`, todo)
+                    .then((response) => {
+                        responseServer = allTodos.map((todo) => todo.id === response.data.id ? response.data : todo)
+                    })
+                    .catch(() => {
+                        return responseServer = allTodos
+                    })
+        return responseServer;
+    }
+
+    async function removeTodo(id:number | undefined, allTodos:ITodoInterface[]) {
+        let responseServer: ITodoInterface[] = [];
+        if(typeof id === 'undefined') return allTodos;
+        await TODO_API.delete(`api/v1/todos/${id}`)
+                    .then((response) => {
+                        responseServer = allTodos.filter((todo) => todo.id !== response.data.id);
+                    })
+                    .catch(() => {
+                        return responseServer = allTodos
+                    })
+        return responseServer;
+    }
+
+    return {getTodos, postTodo, changeTodo, removeTodo}
 }
 
