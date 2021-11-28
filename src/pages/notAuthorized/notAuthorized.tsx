@@ -20,7 +20,7 @@ const NotAuthorized = () => {
                Eu não sei porque você tentou acessar a página de "não autorizado" <br />
                sendo que você <b>está autorizado ಠ_ಠ</b> {' '}
                Eu poderia só ter te redirecionado pra página principal<br/>
-               mas pela sua curiosidade, decidi não fazer isso <b>imediatamente</b>
+               mas pela sua curiosidade, decidi não fazer isso.
             </Typography>
             
             <Button variant='contained' style={{ backgroundColor: '#000000', color: 'white'}} 

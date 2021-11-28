@@ -28,7 +28,7 @@ const Login = () => {
 
     return (
         <FullDiv img={img}>
-            {token && <Redirect to={TODO} />}
+            { token && <Redirect to={TODO} />}
             <CenterGrid >
                 <MainLogo style={{position: 'absolute', paddingBottom:"270px"}}/>
                     <CenterGridItem>

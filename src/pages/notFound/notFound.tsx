@@ -15,7 +15,8 @@ const NotFound = () => {
         return (
             <>
                 <Typography style={{paddingBottom: '30px', paddingTop: '20px',marginLeft: '40px', marginRight: '40px'}}>
-                    Mas não seja por isso ¯\_(ツ)_/¯ Enquanto nós não chegamos no seu tempo, que tal
+                    Mas não seja por isso ¯\_(ツ)_/¯ <br />
+                    Enquanto nós não chegamos no seu tempo, que tal
                     <br />
                     logar na nossa página e desfrutar desse mundo maravilhoso?
                 </Typography>

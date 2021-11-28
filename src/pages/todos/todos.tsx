@@ -2,6 +2,7 @@ import { AuthContext } from 'contexts';
 import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom';
 import { NOT_AUTHORIZED } from 'routes';
+import Todo from 'container/Todo'
 
 const Todos = () => {
     const {token} = useContext(AuthContext);
@@ -9,7 +10,7 @@ const Todos = () => {
     return (
         <>
             {!token && <Redirect to={NOT_AUTHORIZED} />}
-            <div>Todos!</div>
+            <Todo />
         </>
     )
 }
