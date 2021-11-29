@@ -12,6 +12,11 @@ export function todosUtil() {
 
     async function postTodo(todo: ITodoInterface, allTodos: ITodoInterface[]) {
         let responseServer: ITodoInterface[] = [];
+        if(!todo.title) {
+            window.alert("Opa meu patrão, tentando salvar nada? Ai tu me quebra");
+            responseServer = allTodos;
+            return responseServer;
+        }
         await TODO_API.post("api/v1/todos", todo)
                     .then((response) => {
                         responseServer = allTodos.concat(response.data);

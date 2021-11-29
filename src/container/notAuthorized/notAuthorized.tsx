@@ -1,9 +1,10 @@
-import { Button, Typography } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { AuthContext } from "contexts";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { LOGIN, TODO } from "routes";
 import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from "shared"
+import { StyledTypography } from "style/styledsComponents";
 import img from 'shared/images/forbidden.jpg'
 
 const NotAuthorized = () => {
@@ -12,40 +13,42 @@ const NotAuthorized = () => {
     const Logged = () => {
         return (
         <>
-            <Typography variant='h5' style={{paddingTop: '40px', }}>
+            <StyledTypography variant='h5' paddingTop={40}>
                 <b>Opa meu camarada! Tudo bem?</b> <br />
-            </Typography>
+            </StyledTypography>
 
-            <Typography style={{paddingBottom: '30px', marginLeft: '40px', marginRight: '40px'}}>
+            <StyledTypography paddingBottom= {30} marginLeft={40} marginRight={40}>
                Eu não sei porque você tentou acessar a página de "não autorizado" <br />
                sendo que você <b>está autorizado ಠ_ಠ</b> {' '}
                Eu poderia só ter te redirecionado pra página principal<br/>
                mas pela sua curiosidade, decidi não fazer isso.
-            </Typography>
+            </StyledTypography>
             
             <Button variant='contained' style={{ backgroundColor: '#000000', color: 'white'}} 
             component={Link} to={TODO} 
             >
                 Menu principal
             </Button>
-            <Typography style={{marginTop: '5px', paddingBottom: '40px', fontSize: '12px'}}>  
+
+            <StyledTypography marginTop={5} paddingBottom={40} fontSize={12}>  
                 (Mas sério meu patrão, clica ai)
-            </Typography>
+            </StyledTypography>
         </>
         )
     }
 
     const NotLogged =() => {
         return (<>
-            <Typography variant='h5' style={{paddingTop: '40px', }}>
+            <StyledTypography paddingTop={40}>
                 <b>CALMA LÁ MEU PATRÃO, QUE ISSO? </b>🚨 <br />
-            </Typography>
-            <Typography style={{paddingBottom: '40px', marginLeft: '40px', marginRight: '40px'}}>
+            </StyledTypography>
+
+            <StyledTypography paddingBottom={40} marginLeft={40} marginRight={40}>
                 Então, acontece que pra acessar essa página <br/>
                 você <b>precisa estar logado.</b> <br />
                 Mas não se preocupe, não vou chamar a polícia pelo acesso não autorizado, tudo bem? <br />
                 Mas fala ai, aproveita e loga no sistema meu camarada
-            </Typography>
+            </StyledTypography>
 
             <Button variant='contained' style={{marginBottom: '50px', backgroundColor: '#000000', color: 'white'}} 
             component={Link} to={LOGIN} 

@@ -3,7 +3,7 @@ import NotFoundContainer from 'container/notFound'
 
 const NotFound = () => {
     return(
-    <NotFoundContainer />
+        <NotFoundContainer />
     )
 }
 

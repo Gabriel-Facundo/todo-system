@@ -4,8 +4,9 @@ import { LOGIN, TODO } from "routes";
 
 import { AuthContext } from "contexts";
 
-import { Button, Divider, Typography } from "@material-ui/core";
+import { Button, Divider } from "@material-ui/core";
 import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from "shared"
+import {StyledTypography} from 'style/styledsComponents'
 import img from 'shared/images/death-bluescreen-resized.jpg'
 
 const NotFound = () => {
@@ -14,12 +15,12 @@ const NotFound = () => {
     const TextNotLogged = () => {
         return (
             <>
-                <Typography style={{paddingBottom: '30px', paddingTop: '20px',marginLeft: '40px', marginRight: '40px'}}>
+                <StyledTypography paddingBottom={30} paddingTop={20} marginLeft={40} marginRight={40}>
                     Mas não seja por isso ¯\_(ツ)_/¯ <br />
                     Enquanto nós não chegamos no seu tempo, que tal
                     <br />
                     logar na nossa página e desfrutar desse mundo maravilhoso?
-                </Typography>
+                </StyledTypography>
 
                 <Button variant='contained' style={{marginBottom: '50px', backgroundColor: '#0C1D73'}}
                 component={Link} to={LOGIN}
@@ -33,11 +34,11 @@ const NotFound = () => {
     const TextLogged = () => {
         return (
             <>
-                <Typography style={{paddingBottom: '30px', paddingTop: '20px',marginLeft: '40px', marginRight: '40px'}}>
+                <StyledTypography paddingBottom={30} paddingTop={20} marginLeft={40} marginRight={40}>
                     Mas pelo que eu to vendo, você já tá logado né? 
                     <br />
                     Então aproveita e vai desfrutar desse mundo maravilhoso meu guerreiro
-                </Typography>
+                </StyledTypography>
 
                 <Button variant='contained' style={{marginBottom: '50px', backgroundColor: '#0C1D73'}}
                 component={Link} to={TODO} 
@@ -54,11 +55,11 @@ const NotFound = () => {
             <CenterGrid>
                 <CenterGridItem>
                     <CenterPaper color='#243AA9'>
-                        <Typography style={{paddingTop: '40px', paddingBottom: '20px'}}>
+                        <StyledTypography paddingTop={40} paddingBottom={20}>
                             Macacos me mordam ⁀⊙﹏☉⁀ <br />
                             Você está muito a frente no nosso tempo<br />
                             <b>Parece que essa página não foi criada ainda</b> (╥﹏╥)
-                        </Typography>
+                        </StyledTypography>
 
                         <Divider />
                         {!token && <TextNotLogged />}

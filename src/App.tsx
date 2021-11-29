@@ -15,12 +15,14 @@ function App() {
     <BrowserRouter>
         <Suspense fallback={<LinearProgress/>}>
           <Switch >
+
             <Route path='/' exact component={Login}/>
             <Route path={LOGIN} exact component={Login}/>
             <Route path={TODO} exact component={Todos}/>
             <Route path={NOT_FOUND} exact component={NotFound}/>
             <Route path={NOT_AUTHORIZED} exact component={NotAuthorized}/>
             <Route><Redirect to={NOT_FOUND}/></Route>
+            
           </Switch>
         </Suspense>
       </BrowserRouter>

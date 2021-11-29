@@ -1,14 +1,13 @@
 import React, {useContext, useState} from 'react'
 import { Redirect } from 'react-router'
 
-import { Grid, TextField, Typography, Button as MaterialButton} from '@material-ui/core'
-import {ReactComponent as MainLogo} from 'shared//images/logo-southsystem.svg'
+import { TextField} from '@material-ui/core'
 import { FullDiv, CenterGrid, CenterGridItem, CenterPaper } from 'shared'
 import img from 'shared/images/hero-home-bg-cutted.jpg'
 import './login.css'
 
 import { AuthContext } from 'contexts'
-import styled from 'styled-components'
+import { MainLogo, StyledTypography, GridItemDirection, StyledButton } from 'style/styledsComponents'
 
 import {TODO} from 'routes'
 
@@ -30,47 +29,43 @@ const Login = () => {
         <FullDiv img={img}>
             { token && <Redirect to={TODO} />}
             <CenterGrid >
-                <MainLogo style={{position: 'absolute', paddingBottom:"270px"}}/>
+                <MainLogo/>
                     <CenterGridItem>
-                            <CenterPaper color={'#F3814A'}>
-                                <Typography style={{paddingTop: '40px'}}> 
-                                    Salve salve meu patrão<br /> 
-                                    vamos logar no sistema<br /> 
-                                    e ver o que temos para hoje? 💯
-                                </Typography>
+                        <CenterPaper color={'#F3814A'}>
+                            <StyledTypography paddingTop={40}> 
+                                Salve salve meu patrão<br /> 
+                                vamos logar no sistema<br /> 
+                                e ver o que temos para hoje? 💯
+                            </StyledTypography>
 
-                                <Grid item style={{paddingTop: '20px',paddingBottom: '20px', marginLeft: '40px', marginRight: '40px'}}>
-                                    <TextField 
-                                    color='secondary' 
-                                    placeholder='Email'
-                                    value={email}
-                                    onChange={handleEmail}/>
-                                </Grid>
+                            <GridItemDirection paddingTop={20} paddingBottom={20} marginLeft={40} marginRight={40}>
+                                <TextField 
+                                color='secondary' 
+                                placeholder='Email'
+                                value={email}
+                                onChange={handleEmail}/>
+                            </GridItemDirection>
 
-                                <Grid item style={{paddingBottom: '30px'}}>
-                                    <TextField 
-                                    color='secondary' 
-                                    placeholder='Senha' 
-                                    type='password'
-                                    value={password}
-                                    onChange={handlePassword}/>
-                                </Grid>
+                            <GridItemDirection paddingBottom={30}>
+                                <TextField 
+                                color='secondary' 
+                                placeholder='Senha' 
+                                type='password'
+                                value={password}
+                                onChange={handlePassword}/>
+                            </GridItemDirection>
 
-                                <Button className={failLogin} style={{marginBottom: '50px', backgroundColor: '#A43600', color: '#C9967E'}}
-                                    onClick={() => login(email,password)}
-                                >
-                                    Entrar 🚀
-                                </Button>
-                            </CenterPaper>
+                            <StyledButton className={failLogin}  marginBottom={50} backgroundColor={'#A43600'} mainColor={'#C9967E'}
+                                onClick={() => login(email,password)}
+                            >
+                                Entrar 🚀
+                            </StyledButton>
+                        </CenterPaper>
                 </CenterGridItem>
             </CenterGrid>
         </FullDiv>
     )
 }
 
-const Button = styled(MaterialButton).attrs({
-    variant: 'contained'
-})`
-`
 
 export default Login

@@ -1,15 +1,18 @@
-import { Button, Divider, Grid, Paper, Typography, Box, AppBar, Toolbar, TextField,} from '@material-ui/core'
+import { Button, Divider, Grid, Box, Toolbar} from '@material-ui/core'
 import { AuthContext } from 'contexts';
 import ITodoInterface from 'interfaces/ITodoInterface';
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { LOGIN } from 'routes';
-import { CenterGrid, CenterGridItem, CenterPaper } from 'shared';
+import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from 'shared';
 import {todosUtil} from './hooks/todosUtil'
+import img from 'shared/images/universe.jpg'
+import { StyledTypography, StyledTextField, StyledAppBar, GridItemDirection, StyledPaper} from 'style/styledsComponents';
 
 const Todo = () => {
     const [todos, setTodos] = useState([] as ITodoInterface[]);
     const [text, setText] = useState('');
+    const [fetched, setFetching] = useState(false);
     const {getTodos, postTodo, changeTodo, removeTodo} = todosUtil();
     const {logout} = useContext(AuthContext);
     
@@ -20,6 +23,7 @@ const Todo = () => {
             todos = await getTodos();
             if(inPage){
                 setTodos(todos);
+                setFetching(true);
             }
         }
         fetchData();
@@ -34,18 +38,18 @@ const Todo = () => {
     }
     
     return(
-        <>
-            <AppBar style={{padding: '10px'}}>
+        <FullDiv img={img}>  
+            <StyledAppBar padding={10} backgroundColor={'#761406'}>
                 <Toolbar>
-                    <TextField placeholder="Saudações viajante, insira seu novo objetivo de vida aqui 🧙" 
+                    <StyledTextField placeholder="Saudações viajante, insira seu novo objetivo de vida aqui 🧙" 
                     variant='outlined' 
-                    style={{width: '70%', paddingRight: '10px'}} 
+                    mainWidth={85} marginRight={10} backgroundColor={'#7F1C07'} borderRadius={5}
                     color='secondary'
                     value={text}
                     onChange={handleText}
                     />
 
-                    <Button variant='contained' color='secondary' onClick={ () =>  postTodo({
+                    <Button variant='contained' style={{backgroundColor: '#92230C'}} onClick={ () =>  postTodo({
                         title: text,
                         createdAt: new Date(),
                         status: "Uncompleted"
@@ -55,35 +59,32 @@ const Todo = () => {
                     </Button>
 
                     <Grid item sm={1}>
-                    
                     </Grid>
-                    
 
                     <Button component={Link} to={LOGIN}
-                    variant='contained' color='secondary' onClick={() => logout()}
+                    variant='contained' style={{backgroundColor: '#EE0303'}} onClick={() => logout()}
                     > 
-                        Dar o fora daqui!
+                        Sair
                     </Button>
                 </Toolbar>
-            </AppBar>
-            
-            {todos.length > 0 && 
-                <Grid container spacing={2} style={{marginTop: '100px'}}>
+            </StyledAppBar>
+            {todos.length > 0 && fetched &&
+                <Grid container style={{marginTop: '100px'}}>
                     {todos.length > 0 && todos.map((todo) => (
-                        <Grid item xs={4} key={todo.id}>
-                            <Paper style={{textAlign: 'center'}} elevation={24}>
-                                <Typography style={todo.status === "Completed" ? {textDecoration: 'line-through'} : {}}>
+                        <GridItemDirection item xs={4} key={todo.id} padding={10}>
+                            <StyledPaper backgroundColor={'#FF8232'} elevation={24}>
+                                <StyledTypography textDecoration={todo.status === "Completed" ? 'line-through' : ''} paddingTop={10} mainColor={"#8B3600"}>
                                     {todo.title}
-                                </Typography>
+                                </StyledTypography>
     
                                 <Divider />
     
-                                <Typography >
-                                    Criado em: {todo.createdAt}
-                                </Typography>
+                                <StyledTypography mainColor={"#8B3600"}>
+                                    Criado em: {new Date(todo.createdAt).toLocaleDateString()}
+                                </StyledTypography>
     
                                 <Box style={{paddingBottom: '20px'}}>
-                                    <Button color='secondary' variant='contained' style={{marginRight: '20px'}}
+                                    <Button variant='contained' style={{marginRight: '20px', backgroundColor: '#EE0303'}}
                                     onClick={() => removeTodo(todo.id, todos).then((response) => setTodos(response))}
                                     >
                                         Remover tarefa
@@ -91,33 +92,33 @@ const Todo = () => {
     
                                     <Button color='primary' variant='contained'
                                     onClick={() => changeTodo(todo, todos).then((response) => setTodos(response))}
+                                    style={{backgroundColor: '#BD5102', color: "black"}}
                                     >
                                         {todo.status === 'Completed' ? "Descompletar?" : "Completar?"}
                                     </Button>
                                 </Box>
-                            </Paper>
-                        </Grid>
+                            </StyledPaper>
+                        </GridItemDirection>
                     ))}
                 </Grid>
             }
-             {todos.length === 0 && 
-                    <CenterGrid>
-                        <CenterGridItem>
-                            <CenterPaper>
-                                <Typography style={{marginLeft: '40px', marginRight: '40px',marginBottom: '100px'}}>
-                                    Salve meu companheiro de revolução! <br />
-                                    Então, parece que ninguém adicionou nenhum "Todo" até então <br />
-                                    Aproveita ai meu patrão, seja o <b>primeiro</b> e faça inveja em todos <br />
-                                    e não se esqueça<br />
-                                    <b>Viva lá revolución!</b>
-                                </Typography>
-                            </CenterPaper>
-                        </CenterGridItem>
-                    </CenterGrid>}
-           
-        </>
+             {todos.length === 0 && fetched &&
+                <CenterGrid>
+                    <CenterGridItem>
+                        <CenterPaper color={'#783300'}>
+                            <StyledTypography padding={40}>
+                                Opa meu companheiro de revolução! <br />
+                                Então, parece que ninguém adicionou nenhuma anotação até então <br />
+                                Aproveita ai meu patrão, seja o <b>primeiro</b> e faça inveja em todos! <br />
+                                E não se esqueça<br />
+                                <b>Viva lá revolución!</b>
+                            </StyledTypography>
+                        </CenterPaper>
+                    </CenterGridItem>
+                </CenterGrid>
+            }
+        </FullDiv>
     )
-    
 }
 
 export default Todo;

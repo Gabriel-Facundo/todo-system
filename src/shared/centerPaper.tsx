@@ -1,10 +1,10 @@
-import { Paper} from '@material-ui/core'
+import { MainPaper } from 'style/styledsComponents'
 
 const CenterPaper = (props: any) => {
     return (
-        <Paper style={{borderRadius: '10px', backgroundColor: props.color, marginTop: '80px'}} elevation={24} >
+        <MainPaper style={{backgroundColor: props.color}} >
             {props.children}
-        </Paper>
+        </MainPaper>
     )
 }
 
