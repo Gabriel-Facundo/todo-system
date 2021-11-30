@@ -15,7 +15,7 @@ const NotFound = () => {
     const TextNotLogged = () => {
         return (
             <>
-                <StyledTypography paddingBottom={30} paddingTop={20} marginLeft={40} marginRight={40}>
+                <StyledTypography paddingbottom={30} paddingtop={20} marginleft={40} marginright={40}>
                     Mas não seja por isso ¯\_(ツ)_/¯ <br />
                     Enquanto nós não chegamos no seu tempo, que tal
                     <br />
@@ -34,7 +34,7 @@ const NotFound = () => {
     const TextLogged = () => {
         return (
             <>
-                <StyledTypography paddingBottom={30} paddingTop={20} marginLeft={40} marginRight={40}>
+                <StyledTypography paddingbottom={30} paddingtop={20} marginleft={40} marginright={40}>
                     Mas pelo que eu to vendo, você já tá logado né? 
                     <br />
                     Então aproveita e vai desfrutar desse mundo maravilhoso meu guerreiro
@@ -55,7 +55,7 @@ const NotFound = () => {
             <CenterGrid>
                 <CenterGridItem>
                     <CenterPaper color='#243AA9'>
-                        <StyledTypography paddingTop={40} paddingBottom={20}>
+                        <StyledTypography paddingtop={40} paddingbottom={20}>
                             Macacos me mordam ⁀⊙﹏☉⁀ <br />
                             Você está muito a frente no nosso tempo<br />
                             <b>Parece que essa página não foi criada ainda</b> (╥﹏╥)

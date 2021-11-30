@@ -13,11 +13,11 @@ const NotAuthorized = () => {
     const Logged = () => {
         return (
         <>
-            <StyledTypography variant='h5' paddingTop={40}>
+            <StyledTypography variant='h5' paddingtop={40}>
                 <b>Opa meu camarada! Tudo bem?</b> <br />
             </StyledTypography>
 
-            <StyledTypography paddingBottom= {30} marginLeft={40} marginRight={40}>
+            <StyledTypography paddingbottom= {30} marginleft={40} marginright={40}>
                Eu não sei porque você tentou acessar a página de "não autorizado" <br />
                sendo que você <b>está autorizado ಠ_ಠ</b> {' '}
                Eu poderia só ter te redirecionado pra página principal<br/>
@@ -30,7 +30,7 @@ const NotAuthorized = () => {
                 Menu principal
             </Button>
 
-            <StyledTypography marginTop={5} paddingBottom={40} fontSize={12}>  
+            <StyledTypography margintop={5} paddingbottom={40} fontsize={12}>  
                 (Mas sério meu patrão, clica ai)
             </StyledTypography>
         </>
@@ -39,11 +39,11 @@ const NotAuthorized = () => {
 
     const NotLogged =() => {
         return (<>
-            <StyledTypography paddingTop={40}>
+            <StyledTypography paddingtop={40}>
                 <b>CALMA LÁ MEU PATRÃO, QUE ISSO? </b>🚨 <br />
             </StyledTypography>
 
-            <StyledTypography paddingBottom={40} marginLeft={40} marginRight={40}>
+            <StyledTypography paddingbottom={40} marginleft={40} marginright={40}>
                 Então, acontece que pra acessar essa página <br/>
                 você <b>precisa estar logado.</b> <br />
                 Mas não se preocupe, não vou chamar a polícia pelo acesso não autorizado, tudo bem? <br />

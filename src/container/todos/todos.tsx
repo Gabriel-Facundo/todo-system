@@ -39,11 +39,11 @@ const Todo = () => {
     
     return(
         <FullDiv img={img}>  
-            <StyledAppBar padding={10} backgroundColor={'#761406'}>
+            <StyledAppBar padding={10} backgroundcolor={'#761406'}>
                 <Toolbar>
                     <StyledTextField placeholder="Saudações viajante, insira seu novo objetivo de vida aqui 🧙" 
                     variant='outlined' 
-                    mainWidth={85} marginRight={10} backgroundColor={'#7F1C07'} borderRadius={5}
+                    mainwidth={85} marginright={10} backgroundcolor={'#7F1C07'} borderradius={5}
                     color='secondary'
                     value={text}
                     onChange={handleText}
@@ -72,14 +72,14 @@ const Todo = () => {
                 <Grid container style={{marginTop: '100px'}}>
                     {todos.length > 0 && todos.map((todo) => (
                         <GridItemDirection item xs={4} key={todo.id} padding={10}>
-                            <StyledPaper backgroundColor={'#FF8232'} elevation={24}>
-                                <StyledTypography textDecoration={todo.status === "Completed" ? 'line-through' : ''} paddingTop={10} mainColor={"#8B3600"}>
+                            <StyledPaper backgroundcolor={'#FF8232'} elevation={24}>
+                                <StyledTypography textdecoration={todo.status === "Completed" ? 'line-through' : ''} paddingtop={10} maincolor={"#8B3600"}>
                                     {todo.title}
                                 </StyledTypography>
     
                                 <Divider />
     
-                                <StyledTypography mainColor={"#8B3600"}>
+                                <StyledTypography maincolor={"#8B3600"}>
                                     Criado em: {new Date(todo.createdAt).toLocaleDateString()}
                                 </StyledTypography>
     

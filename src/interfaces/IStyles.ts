@@ -1,19 +1,19 @@
 interface IStyles {
-    paddingTop?: number;
-    paddingBottom?: number;
-    paddingRight?: number;
-    paddingLeft?: number;
+    paddingtop?: number;
+    paddingbottom?: number;
+    paddingright?: number;
+    paddingleft?: number;
     padding?: number;
-    marginTop?: number;
-    marginBottom?: number;
-    marginRight?: number;
-    marginLeft?: number;
-    mainWidth?: number;
-    mainColor?: string;
-    backgroundColor?: string;
-    borderRadius?: number;
-    fontSize?: number;
-    textDecoration?: string;
+    margintop?: number;
+    marginbottom?: number;
+    marginright?: number;
+    marginleft?: number;
+    mainwidth?: number;
+    maincolor?: string;
+    backgroundcolor?: string;
+    borderradius?: number;
+    fontsize?: number;
+    textdecoration?: string;
 }
 
 export default IStyles

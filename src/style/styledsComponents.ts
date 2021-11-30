@@ -23,7 +23,7 @@ export const MainPaper = styled(Paper).attrs({
 
 export const StyledPaper = styled(Paper)<IStyles>`
     text-align: center;
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundcolor};
 `
 
 export const CenterDiv = styled.div`
@@ -42,56 +42,55 @@ export const MainLogo = styled(Logo)`
 `
 
 export const StyledTypography = styled(Typography)<IStyles>`
-    padding-top: ${(props) => props.paddingTop}px;
-    padding-bottom: ${(props) => props.paddingBottom}px;
+    padding-top: ${(props) => props.paddingtop}px;
+    padding-bottom: ${(props) => props.paddingbottom}px;
     padding: ${(props) => props.padding}px;
-    margin-left: ${(props) => props.marginLeft}px;
-    margin-right: ${(props) => props.marginRight}px;
-    margin-bottom: ${(props) => props.marginBottom}px;
-    color: ${(props) => props.mainColor};
-    text-decoration: ${(props) => props.textDecoration};
+    margin-left: ${(props) => props.marginleft}px;
+    margin-right: ${(props) => props.marginright}px;
+    margin-bottom: ${(props) => props.marginbottom}px;
+    color: ${(props) => props.maincolor};
+    text-decoration: ${(props) => props.textdecoration};
 `
 
 export const GridItemDirection = styled(Grid).attrs({
     item: true
 })<IStyles>`
-    padding-top: ${(props) => props.paddingTop}px;
-    padding-bottom: ${(props) => props.paddingBottom}px;
-    margin-left: ${(props) => props.marginLeft}px;
-    margin-right: ${(props) => props.marginRight}px;
+    padding-top: ${(props) => props.paddingtop}px;
+    padding-bottom: ${(props) => props.paddingbottom}px;
+    margin-left: ${(props) => props.marginleft}px;
+    margin-right: ${(props) => props.marginright}px;
     padding: ${(props) => props.padding}px;
 `
 
 export const StyledButton = styled(Button).attrs({
-    variant: 'contained',
-    disabledElevation: false
+    variant: 'contained'
 })<IStyles>`
-    padding-top: ${(props) => props.paddingTop}px;
-    padding-bottom: ${(props) => props.paddingBottom}px;
-    margin-left: ${(props) => props.marginLeft}px;
-    margin-right: ${(props) => props.marginRight}px;
-    margin-bottom: ${(props) => props.marginBottom}px;
-    color: ${(props) => props.mainColor};
-    background-color: ${(props) => props.backgroundColor};
-    font-sive: ${(props) => props.fontSize};
+    padding-top: ${(props) => props.paddingtop}px;
+    padding-bottom: ${(props) => props.paddingbottom}px;
+    margin-left: ${(props) => props.marginleft}px;
+    margin-right: ${(props) => props.marginright}px;
+    margin-bottom: ${(props) => props.marginbottom}px;
+    color: ${(props) => props.maincolor};
+    background-color: ${(props) => props.backgroundcolor};
+    font-sive: ${(props) => props.fontsize};
 
     &:hover{
-        background-color: ${(props) => props.backgroundColor};
+        background-color: ${(props) => props.backgroundcolor};
         box-shadow: 0px 0px 15px black;
     }   
 `
 
 export const StyledTextField = styled(TextField)<IStyles>`
-    padding-top: ${(props) => props.paddingTop}px;
-    padding-bottom: ${(props) => props.paddingBottom}px;
-    margin-left: ${(props) => props.marginLeft}px;
-    margin-right: ${(props) => props.marginRight}px;
-    margin-bottom: ${(props) => props.marginBottom}px;
-    border-radius: ${(props) => props.borderRadius}px;
-    width: ${(props) => props.mainWidth}%;
+    padding-top: ${(props) => props.paddingtop}px;
+    padding-bottom: ${(props) => props.paddingbottom}px;
+    margin-left: ${(props) => props.marginleft}px;
+    margin-right: ${(props) => props.marginright}px;
+    margin-bottom: ${(props) => props.marginbottom}px;
+    border-radius: ${(props) => props.borderradius}px;
+    width: ${(props) => props.mainwidth}%;
 `
 
 export const StyledAppBar = styled(AppBar)<IStyles>`
     padding: ${(props) => props.padding}px;
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundcolor};
 `

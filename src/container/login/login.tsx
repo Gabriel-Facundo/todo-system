@@ -32,13 +32,13 @@ const Login = () => {
                 <MainLogo/>
                     <CenterGridItem>
                         <CenterPaper color={'#F3814A'}>
-                            <StyledTypography paddingTop={40}> 
+                            <StyledTypography paddingtop={40}> 
                                 Salve salve meu patrão<br /> 
                                 vamos logar no sistema<br /> 
                                 e ver o que temos para hoje? 💯
                             </StyledTypography>
 
-                            <GridItemDirection paddingTop={20} paddingBottom={20} marginLeft={40} marginRight={40}>
+                            <GridItemDirection paddingtop={20} paddingbottom={20} marginleft={40} marginright={40}>
                                 <TextField 
                                 color='secondary' 
                                 placeholder='Email'
@@ -46,7 +46,7 @@ const Login = () => {
                                 onChange={handleEmail}/>
                             </GridItemDirection>
 
-                            <GridItemDirection paddingBottom={30}>
+                            <GridItemDirection paddingbottom={30}>
                                 <TextField 
                                 color='secondary' 
                                 placeholder='Senha' 
@@ -55,7 +55,7 @@ const Login = () => {
                                 onChange={handlePassword}/>
                             </GridItemDirection>
 
-                            <StyledButton className={failLogin}  marginBottom={50} backgroundColor={'#A43600'} mainColor={'#C9967E'}
+                            <StyledButton className={failLogin}  marginbottom={50} backgroundcolor={'#A43600'} maincolor={'#C9967E'}
                                 onClick={() => login(email,password)}
                             >
                                 Entrar 🚀
