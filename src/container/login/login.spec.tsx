@@ -37,15 +37,17 @@ describe("Application should redirect to 'TODO' page if logged", () => {
 })
 
 describe("Application should change field login and password when the user press the keyboard", () => {
-    test("Change login and password field", () => {
+    test("Should change login field when user interacts", () => {
         render(<Login></Login>);
         const email = screen.getByPlaceholderText("Email");
-        const password = screen.getByPlaceholderText("Senha");
-        
         userEvent.type(email, "teste@teste.com");
-        userEvent.type(password, "12345678");
-
         expect(screen.getByDisplayValue('teste@teste.com')).toBeInTheDocument();
+    })
+
+    test("Should change password field when user interacts", () => {
+        render(<Login></Login>);
+        const password = screen.getByPlaceholderText("Senha");
+        userEvent.type(password, "12345678");
         expect(screen.getByDisplayValue('12345678')).toBeInTheDocument();
     })
 })

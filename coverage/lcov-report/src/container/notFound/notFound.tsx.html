@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for login/login.tsx</title>
+    <title>Code coverage report for src/container/notFound/notFound.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">login</a> login.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/container/notFound</a> notFound.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
                 <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>3/3</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -127,9 +127,10 @@
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,20 +142,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">27x</span>
-<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">27x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,6 +159,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -197,94 +194,106 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {useContext, useState} from 'react'
-import { Redirect } from 'react-router'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useContext } from "react";
+import {Link} from 'react-router-dom'
+import { LOGIN, TODO } from "routes";
 &nbsp;
-import { TextField} from '@material-ui/core'
-import { FullDiv, CenterGrid, CenterGridItem, CenterPaper } from 'shared'
-import img from 'shared/images/hero-home-bg-cutted.jpg'
-import './login.css'
+import { AuthContext } from "contexts";
 &nbsp;
-import { AuthContext } from 'contexts'
-import { MainLogo, StyledTypography, GridItemDirection, StyledButton } from 'style/styledsComponents'
+import { Button, Divider } from "@material-ui/core";
+import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from "shared"
+import {StyledTypography} from 'style/styledsComponents'
+import img from 'shared/images/death-bluescreen-resized.jpg'
 &nbsp;
-import {TODO} from 'routes'
+const NotFound = () =&gt; {
+    const {token} = useContext(AuthContext);
 &nbsp;
-const Login = () =&gt; {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const TextNotLogged = () =&gt; {
+        return (
+            &lt;&gt;
+                &lt;StyledTypography paddingbottom={30} paddingtop={20} marginleft={40} marginright={40}&gt;
+                    Mas não seja por isso ¯\_(ツ)_/¯ &lt;br /&gt;
+                    Enquanto nós não chegamos no seu tempo, que tal
+                    &lt;br /&gt;
+                    logar na nossa página e desfrutar desse mundo maravilhoso?
+                &lt;/StyledTypography&gt;
 &nbsp;
-    const {login, token, failLogin} = useContext(AuthContext);
-&nbsp;
-    function handlePassword(e: React.ChangeEvent&lt;HTMLInputElement&gt;) {
-        setPassword(e.target.value);
+                &lt;Button variant='contained' style={{marginBottom: '50px', backgroundColor: '#0C1D73'}}
+                component={Link} to={LOGIN}
+                &gt;
+                    &lt;b&gt;IR PARA LOGIN&lt;/b&gt;
+                &lt;/Button&gt;
+            &lt;/&gt;
+        )
     }
 &nbsp;
-    function handleEmail(e: React.ChangeEvent&lt;HTMLInputElement&gt;) {
-        setEmail(e.target.value);
+    const TextLogged = () =&gt; {
+        return (
+            &lt;&gt;
+                &lt;StyledTypography paddingbottom={30} paddingtop={20} marginleft={40} marginright={40}&gt;
+                    Mas pelo que eu to vendo, você já tá logado né? 
+                    &lt;br /&gt;
+                    Então aproveita e vai desfrutar desse mundo maravilhoso meu guerreiro
+                &lt;/StyledTypography&gt;
+&nbsp;
+                &lt;Button variant='contained' style={{marginBottom: '50px', backgroundColor: '#0C1D73'}}
+                component={Link} to={TODO} 
+                &gt;
+                    &lt;b&gt;MUNDO MARAVILHOSO&lt;/b&gt;
+                &lt;/Button&gt;
+            &lt;/&gt;
+        )
     }
+   
 &nbsp;
     return (
         &lt;FullDiv img={img}&gt;
-            { token &amp;&amp; &lt;Redirect to={TODO} /&gt;}
-            &lt;CenterGrid &gt;
-                &lt;MainLogo/&gt;
-                    &lt;CenterGridItem&gt;
-                        &lt;CenterPaper color={'#F3814A'}&gt;
-                            &lt;StyledTypography paddingtop={40}&gt; 
-                                Salve salve meu patrão&lt;br /&gt; 
-                                vamos logar no sistema&lt;br /&gt; 
-                                e ver o que temos para hoje? 💯
-                            &lt;/StyledTypography&gt;
+            &lt;CenterGrid&gt;
+                &lt;CenterGridItem&gt;
+                    &lt;CenterPaper color='#243AA9'&gt;
+                        &lt;StyledTypography paddingtop={40} paddingbottom={20}&gt;
+                            Macacos me mordam ⁀⊙﹏☉⁀ &lt;br /&gt;
+                            Você está muito a frente no nosso tempo&lt;br /&gt;
+                            &lt;b&gt;Parece que essa página não foi criada ainda&lt;/b&gt; (╥﹏╥)
+                        &lt;/StyledTypography&gt;
 &nbsp;
-                            &lt;GridItemDirection paddingtop={20} paddingbottom={20} marginleft={40} marginright={40}&gt;
-                                &lt;TextField 
-                                color='secondary' 
-                                placeholder='Email'
-                                value={email}
-                                onChange={handleEmail}/&gt;
-                            &lt;/GridItemDirection&gt;
-&nbsp;
-                            &lt;GridItemDirection paddingbottom={30}&gt;
-                                &lt;TextField 
-                                color='secondary' 
-                                placeholder='Senha' 
-                                type='password'
-                                value={password}
-                                onChange={handlePassword}/&gt;
-                            &lt;/GridItemDirection&gt;
-&nbsp;
-                            &lt;StyledButton className={failLogin}  marginbottom={50} backgroundcolor={'#A43600'} maincolor={'#C9967E'}
-                                onClick={() =&gt; login(email,password)}
-                            &gt;
-                                Entrar 🚀
-                            &lt;/StyledButton&gt;
-                        &lt;/CenterPaper&gt;
+                        &lt;Divider /&gt;
+                        {!token &amp;&amp; &lt;TextNotLogged /&gt;}
+                        {token &amp;&amp; &lt;TextLogged /&gt;}
+                    &lt;/CenterPaper&gt;
                 &lt;/CenterGridItem&gt;
             &lt;/CenterGrid&gt;
         &lt;/FullDiv&gt;
     )
 }
 &nbsp;
-&nbsp;
-export default Login</pre></td></tr></table></pre>
+export default NotFound;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Dec 01 2021 00:51:39 GMT-0300 (Horário Padrão de Brasília)
+                at Tue Nov 30 2021 21:29:48 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
-        <script src="../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

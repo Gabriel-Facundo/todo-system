@@ -7,7 +7,7 @@ afterEach(() => {
     cleanup();
 })
 
-describe("Application should render 'IR PARA LOGIN' if user is not logged", () => {
+describe("Application should render 'IR PARA LOGIN' if user is not logged ", () => {
     test("Check if 'IR PARA LOGIN' exists", () => {
         render(
         <MemoryRouter>

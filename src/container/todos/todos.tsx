@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { LOGIN } from 'routes';
 import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from 'shared';
-import {todosUtil} from './hooks/todosUtil'
+import {getTodos, postTodo, changeTodo, removeTodo} from './hooks/todosUtil'
 import img from 'shared/images/universe.jpg'
 import { StyledTypography, StyledTextField, StyledAppBar, GridItemDirection, StyledPaper} from 'style/styledsComponents';
 
@@ -13,9 +13,8 @@ const Todo = () => {
     const [todos, setTodos] = useState([] as ITodoInterface[]);
     const [text, setText] = useState('');
     const [fetched, setFetching] = useState(false);
-    const {getTodos, postTodo, changeTodo, removeTodo} = todosUtil();
     const {logout} = useContext(AuthContext);
-    
+  
     useEffect(() => {
         let inPage = true;
         let todos:ITodoInterface[] = [];
@@ -106,7 +105,7 @@ const Todo = () => {
                 <CenterGrid>
                     <CenterGridItem>
                         <CenterPaper color={'#783300'}>
-                            <StyledTypography padding={40}>
+                            <StyledTypography padding={40} data-testid="no-todos">
                                 Opa meu companheiro de revolução! <br />
                                 Então, parece que ninguém adicionou nenhuma anotação até então <br />
                                 Aproveita ai meu patrão, seja o <b>primeiro</b> e faça inveja em todos! <br />
