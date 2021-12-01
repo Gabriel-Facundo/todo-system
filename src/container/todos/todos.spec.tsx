@@ -1,11 +1,13 @@
 import { render, screen, cleanup, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import { AuthContext } from "contexts";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Route } from "react-router-dom";
 import {getTodos, postTodo, changeTodo, removeTodo} from './hooks/todosUtil';
 import {mocked} from 'ts-jest/utils'
 import Todo from '.'
 import ITodoInterface from "interfaces/ITodoInterface";
+import { NOT_AUTHORIZED } from "routes";
+import NotAuthorized from "container/notAuthorized";
 
 const testt: ITodoInterface[] = [];
 
@@ -26,17 +28,21 @@ describe("Todo input value should change when the user press any key on the keyb
         getTodosMocked.mockResolvedValue([]);
     })
     
-    test("Check if input value changes ", async () => {
+    test("Check if input value changes", async () => {
         render(
         <MemoryRouter>
             <Todo></Todo>
         </MemoryRouter>
         );
         await waitFor(() => expect(getTodosMocked).toHaveBeenCalledTimes(1))
-        const todoText = screen.getByPlaceholderText("Saudações viajante, insira seu novo objetivo de vida aqui 🧙");
-        userEvent.type(todoText, "Ember Falls - The World Is Burning")
-        const result = screen.queryByText("Ember Falls - The World Is Burning");
-        expect(result).toBeInTheDocument;
+        const todoText = screen.getByTestId('input-text');
+        let error;
+        try{
+            userEvent.type(todoText, "Ember Falls - The World Is Burning")
+        } catch (e: any) {
+            error = e.message;
+        }
+        expect(error).toBeUndefined();
     })
 })
 
@@ -45,6 +51,7 @@ describe("Checking if action buttons is working as expected", () => {
         getTodosMocked.mockResolvedValue([]);
         postTopdosMocked.mockResolvedValue([{id: 1, title: "Audioslave - Like a Stone", createdAt: new Date(), status: "Completed"}]);
         removeTodosMocked.mockResolvedValue([]);
+        changeTodosMocked.mockResolvedValue([{id: 1, title: "Architects - Animals", createdAt: new Date(), status: "Completed"}])
     })
 
     test("Expect 'add' to include a new todo", async () => {
@@ -94,6 +101,21 @@ describe("Checking if action buttons is working as expected", () => {
             removedTodo = e.message;
         }
         expect(removeTodo).toBeTruthy();        
+    })
+
+    test("Expect 'Completar' button to change todo status", async () => {
+        getTodosMocked.mockResolvedValue([{id: 1, title: "Architects - Animals", createdAt: new Date(), status: "Uncompleted"}]);
+        render(
+            <MemoryRouter>
+                <Todo></Todo>
+            </MemoryRouter>
+            );
+        await waitFor(() => expect(getTodosMocked).toHaveBeenCalledTimes(1))
+        const input = screen.getByRole('button', {name: /Completar?/i})
+        userEvent.click(input);
+        await waitFor(() => expect(changeTodosMocked).toHaveBeenCalledTimes(1));
+        expect(screen.getByText(/Architects - Animals/)).toHaveStyle("text-decoration: line-through");
+             
     })
 })
 

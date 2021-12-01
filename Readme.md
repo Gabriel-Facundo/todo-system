@@ -1,12 +1,35 @@
-Por enquanto, a metodologia que eu vou fazer quanto aos "Todos" será a seguinte:
-    Ao adicionar um todo, irá fazer um post na API desse novo Todo, mas o front não chamará novamente
-    a API, ele terá um array interno já com os todos (que ele deu get ao renderizar) e também dará um
-    concat nesse mesmo array com o novo todo (mas só após o post ser sucesso, pois se o post der erro e ele adicionar no array, vai enganar o usuário fazendo-o pensar que adicionou de verdade).
-    O mesmo acontecerá para clicar em "Completar" e "Descompletar".
-    Optei por essa abordagem, pois é mais eficiente e rápido pro front tratar tudo, pois ele precisará
-    fazer menos chamadas para a API (o que, levando em consideração uma situação que eu tenha 100000000000 todos, seria uma eternidade para fazer qualquer coisa se ele sempre precisasse chamar a API para atualizar os dados no front, ele sempre vai precisar chamar a API para salvar no servidor), apesar de ser mais "doloroso" ao codar. Essa forma pode gerar um problema de concorrência, como todos veem os mesmos "todos", se duas pessoas usarem ao mesmo tempo, uma não verá a atualização da outra, somente ao atualizar a página, mas supondo que essa aplicação estivesse num ambiente real, isso não faria diferença, uma vez que a aplicação só carregaria os "todos" do usuário logado em específico.
+# Opa meu camarada, tudo bem? 🧞
 
-    Outra opção seria: Ao adicionar o Todo ou clicar em "Completar" ou "Descompletar", ele faria a atualização na API e já chamasse a API novamente para re renderizar o conteúdo atualizado, essa forma seria mais fácil, mas cai no problema que eu situei acima, se eu tiver 100000000 todos (eu sei que não é possível, pois o MockAPI só permite 100, mas é uma situação que poderia ser real), cada clique seria uma eternidade dessa forma, pois além de um post/put, teria um get.
+​	Acredito que esse projeto seja o mais longo do projeto, tentei fazer o máximo do projeto para estilizar, separar os componentes, organizar as pastas, abstração de recursos. Atualmente, o projeto tem somente uma única linha que não foi coberta de teste, pois ao entrar na rota de "todo", é feito automaticamente uma chamada GET para pegar todos os "Todos" na API, mas ao sair da página antes da requisição terminar, irá lançar um erro no console (que não quebra a aplicação), que ele está tentando atualizar um hook que não existe mais. Para controlar isso, eu implementei um callback no final do useEffect que cancela esse GET, para cobrir essa linha, eu precisaria mexer no hook diretamente dentro do teste e não soube como realizar isso no momento. 
 
-Todos 
- -Teste de componente
+​	Como o projeto Impulsionar está próximo de acabar, vou ficar devendo somente essa única linha no coverage para poder seguir com os próximos desafios.
+
+​	Então, vou resumir alguns detalhes do projeto:
+
+Dependências utilizadas:
+
+* Material UI
+* React Router Dom
+* Styled Components
+* Axios
+* TS-Jest
+
+
+
+​	Observações:
+
+* Ao abrir o projeto, instalar as dependências usando o comando "npm install"
+
+* Para efetuar os testes, basta rodar o comando "npm run test-coverage", o projeto está configurado para testar somente componentes de apresentação.
+
+* Para efetuar a build do projeto, comando: "npm build"
+* Para subir o projeto em servidor de development: "npm start"
+
+
+
+No mais, obrigado por analisar o teste!! 👋🏻
+
+
+
+​	
+

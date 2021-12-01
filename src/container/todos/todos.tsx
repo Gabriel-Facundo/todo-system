@@ -2,8 +2,8 @@ import { Button, Divider, Grid, Box, Toolbar} from '@material-ui/core'
 import { AuthContext } from 'contexts';
 import ITodoInterface from 'interfaces/ITodoInterface';
 import { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-import { LOGIN } from 'routes';
+import { Link, Redirect } from 'react-router-dom';
+import { LOGIN, NOT_AUTHORIZED } from 'routes';
 import { CenterGrid, CenterGridItem, CenterPaper, FullDiv } from 'shared';
 import {getTodos, postTodo, changeTodo, removeTodo} from './hooks/todosUtil'
 import img from 'shared/images/universe.jpg'
@@ -13,7 +13,7 @@ const Todo = () => {
     const [todos, setTodos] = useState([] as ITodoInterface[]);
     const [text, setText] = useState('');
     const [fetched, setFetching] = useState(false);
-    const {logout} = useContext(AuthContext);
+    const {logout, token} = useContext(AuthContext);
   
     useEffect(() => {
         let inPage = true;
@@ -38,9 +38,10 @@ const Todo = () => {
     
     return(
         <FullDiv img={img}>  
-            <StyledAppBar padding={10} backgroundcolor={'#761406'}>
+            {!token && <Redirect to={NOT_AUTHORIZED} />}
+            <StyledAppBar padding={10} backgroundcolor={'#F0723C'}>
                 <Toolbar>
-                    <StyledTextField placeholder="Saudações viajante, insira seu novo objetivo de vida aqui 🧙" 
+                    <StyledTextField placeholder="Saudações viajante, insira seu novo objetivo de vida aqui 🧙" data-testid="input-text"
                     variant='outlined' 
                     mainwidth={85} marginright={10} backgroundcolor={'#7F1C07'} borderradius={5}
                     color='secondary'
@@ -48,7 +49,7 @@ const Todo = () => {
                     onChange={handleText}
                     />
 
-                    <Button variant='contained' style={{backgroundColor: '#92230C'}} onClick={ () =>  postTodo({
+                    <Button variant='contained' style={{backgroundColor: '#F03E16'}} onClick={ () =>  postTodo({
                         title: text,
                         createdAt: new Date(),
                         status: "Uncompleted"
@@ -104,7 +105,7 @@ const Todo = () => {
              {todos.length === 0 && fetched &&
                 <CenterGrid>
                     <CenterGridItem>
-                        <CenterPaper color={'#783300'}>
+                        <CenterPaper color={'#F0723C'}>
                             <StyledTypography padding={40} data-testid="no-todos">
                                 Opa meu companheiro de revolução! <br />
                                 Então, parece que ninguém adicionou nenhuma anotação até então <br />

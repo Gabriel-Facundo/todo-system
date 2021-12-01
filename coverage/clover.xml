@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1638330699021" clover="3.2.0">
-  <project timestamp="1638330699021" name="All files">
-    <metrics statements="45" coveredstatements="44" conditionals="24" coveredconditionals="21" methods="23" coveredmethods="21" elements="92" coveredelements="86" complexity="0" loc="45" ncloc="45" packages="4" files="4" classes="4"/>
+<coverage generated="1638362625161" clover="3.2.0">
+  <project timestamp="1638362625161" name="All files">
+    <metrics statements="45" coveredstatements="45" conditionals="26" coveredconditionals="25" methods="23" coveredmethods="23" elements="94" coveredelements="93" complexity="0" loc="45" ncloc="45" packages="4" files="4" classes="4"/>
     <package name="login">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-      <file name="login.tsx" path="C:\Users\gfacu\Desktop\Curso React\desafio-frontend-modulo3\src\container\login\login.tsx">
+      <file name="login.tsx" path="C:\Users\gabriel.macedo\Desktop\study\desafio-frontend-modulo3\src\container\login\login.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="27" type="stmt"/>
@@ -13,12 +13,12 @@
         <line num="21" count="8" type="stmt"/>
         <line num="25" count="15" type="stmt"/>
         <line num="28" count="27" type="stmt"/>
-        <line num="59" count="2" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
       </file>
     </package>
     <package name="notAuthorized">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="notAuthorized.tsx" path="C:\Users\gfacu\Desktop\Curso React\desafio-frontend-modulo3\src\container\notAuthorized\notAuthorized.tsx">
+      <file name="notAuthorized.tsx" path="C:\Users\gabriel.macedo\Desktop\study\desafio-frontend-modulo3\src\container\notAuthorized\notAuthorized.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
@@ -31,7 +31,7 @@
     </package>
     <package name="notFound">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="notFound.tsx" path="C:\Users\gfacu\Desktop\Curso React\desafio-frontend-modulo3\src\container\notFound\notFound.tsx">
+      <file name="notFound.tsx" path="C:\Users\gabriel.macedo\Desktop\study\desafio-frontend-modulo3\src\container\notFound\notFound.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
@@ -43,32 +43,32 @@
       </file>
     </package>
     <package name="todos">
-      <metrics statements="23" coveredstatements="22" conditionals="14" coveredconditionals="11" methods="13" coveredmethods="11"/>
-      <file name="todos.tsx" path="C:\Users\gfacu\Desktop\Curso React\desafio-frontend-modulo3\src\container\todos\todos.tsx">
-        <metrics statements="23" coveredstatements="22" conditionals="14" coveredconditionals="11" methods="13" coveredmethods="11"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="78" type="stmt"/>
-        <line num="14" count="77" type="stmt"/>
-        <line num="15" count="77" type="stmt"/>
-        <line num="16" count="77" type="stmt"/>
-        <line num="18" count="77" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="23" count="5" type="cond" truecount="1" falsecount="1"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="28" count="5" type="stmt"/>
-        <line num="29" count="5" type="stmt"/>
-        <line num="30" count="5" type="stmt"/>
-        <line num="36" count="59" type="stmt"/>
-        <line num="39" count="77" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="73" count="3" type="stmt"/>
-        <line num="87" count="1" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
+      <metrics statements="23" coveredstatements="23" conditionals="16" coveredconditionals="15" methods="13" coveredmethods="13"/>
+      <file name="todos.tsx" path="C:\Users\gabriel.macedo\Desktop\study\desafio-frontend-modulo3\src\container\todos\todos.tsx">
+        <metrics statements="23" coveredstatements="23" conditionals="16" coveredconditionals="15" methods="13" coveredmethods="13"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="49" type="stmt"/>
+        <line num="14" count="48" type="stmt"/>
+        <line num="15" count="48" type="stmt"/>
+        <line num="16" count="48" type="stmt"/>
+        <line num="18" count="48" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="36" count="25" type="stmt"/>
+        <line num="39" count="48" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="74" count="5" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
       </file>
     </package>
   </project>

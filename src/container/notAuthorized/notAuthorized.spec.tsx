@@ -8,7 +8,7 @@ afterEach(() => {
 })
 
 
-describe("Application should render 'Logar!' button if user is not logged ", () => {
+describe("Application should render 'Logar!' button if user is not logged", () => {
     test("Check if 'Logar!' exists", () => {
         render(
         <MemoryRouter>

@@ -32,7 +32,7 @@ const Login = () => {
                 <MainLogo/>
                     <CenterGridItem>
                         <CenterPaper color={'#F3814A'}>
-                            <StyledTypography paddingtop={40}> 
+                            <StyledTypography paddingtop={40} maincolor={"#AD4E00"}> 
                                 Salve salve meu patrão<br /> 
                                 vamos logar no sistema<br /> 
                                 e ver o que temos para hoje? 💯

@@ -1,8 +1,10 @@
 import userEvent from '@testing-library/user-event';
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup, waitFor } from "@testing-library/react";
 import Login from '../login'
 import { AuthContext } from 'contexts';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
+import { TODO } from 'routes';
+import Todos from 'pages/todos';
 
 afterEach(() => {
     cleanup();
@@ -17,22 +19,23 @@ describe("Application should do nothing with enter button without login and pass
         );
         const loginButton = screen.getByText("Entrar 🚀");
         userEvent.click(loginButton);
-        expect(loginButton).toBeInTheDocument;
+        expect(loginButton).toBeInTheDocument();
     })
 })
 
 describe("Application should redirect to 'TODO' page if logged", () => {
-    test("Check if the user is redirected", () => {
+    test("Check if the user is redirected", async () => {
         render(
         <AuthContext.Provider value={{token: true, failLogin: '', login: () => {}, logout: () => {}}}>
             <MemoryRouter>
                 <Login></Login>
+                <Route path={TODO} exact component={Todos}/>
             </MemoryRouter>
         </AuthContext.Provider>
         );
-        const loginButton = screen.getByText("Entrar 🚀");
-        userEvent.click(loginButton);
-        expect(loginButton).not.toBeInTheDocument;
+        await waitFor(() => expect(screen.getByPlaceholderText("Saudações viajante, insira seu novo objetivo de vida aqui 🧙")).toBeInTheDocument())
+        const result = screen.getByPlaceholderText("Saudações viajante, insira seu novo objetivo de vida aqui 🧙");
+        expect(result).toBeInTheDocument();
     })
 })
 
