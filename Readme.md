@@ -22,7 +22,7 @@ Dependências utilizadas:
 
 * Para efetuar os testes, basta rodar o comando "npm run test-coverage", o projeto está configurado para testar somente componentes de apresentação.
 
-* Para efetuar a build do projeto, comando: "npm build"
+* Para efetuar a build do projeto, comando: "npm run-script build"
 * Para subir o projeto em servidor de development: "npm start"
 
 
