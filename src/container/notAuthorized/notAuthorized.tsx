@@ -30,7 +30,7 @@ const NotAuthorized = () => {
                 Menu principal
             </Button>
 
-            <StyledTypography margintop={5} paddingbottom={40} fontsize={12}>  
+            <StyledTypography margintop={5} paddingbottom={40} fontSize={12}>  
                 (Mas sério meu patrão, clica ai)
             </StyledTypography>
         </>

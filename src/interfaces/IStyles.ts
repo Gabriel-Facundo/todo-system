@@ -12,8 +12,8 @@ interface IStyles {
     maincolor?: string;
     backgroundcolor?: string;
     borderradius?: number;
-    fontsize?: number;
-    textdecoration?: string;
+    fontSize?: number;
+    textDecoration?: string;
 }
 
 export default IStyles

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1638362625161" clover="3.2.0">
-  <project timestamp="1638362625161" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="26" coveredconditionals="25" methods="23" coveredmethods="23" elements="94" coveredelements="93" complexity="0" loc="45" ncloc="45" packages="4" files="4" classes="4"/>
+<coverage generated="1638406271093" clover="3.2.0">
+  <project timestamp="1638406271093" name="All files">
+    <metrics statements="45" coveredstatements="44" conditionals="24" coveredconditionals="21" methods="23" coveredmethods="21" elements="92" coveredelements="86" complexity="0" loc="45" ncloc="45" packages="4" files="4" classes="4"/>
     <package name="login">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="login.tsx" path="C:\Users\gabriel.macedo\Desktop\study\desafio-frontend-modulo3\src\container\login\login.tsx">
