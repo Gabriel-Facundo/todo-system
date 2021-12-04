@@ -72,7 +72,7 @@ const Todo = () => {
                     {todos.length > 0 && todos.map((todo) => (
                         <GridItemDirection item xs={4} key={todo.id} padding={10}>
                             <StyledPaper backgroundcolor={'#FF8232'} elevation={24}>
-                                <StyledTypography textdecoration={todo.status === "Completed" ? 'line-through' : ''} paddingtop={10} maincolor={"#8B3600"}>
+                                <StyledTypography textDecoration={todo.status === "Completed" ? 'line-through' : ''} paddingtop={10} maincolor={"#8B3600"}>
                                     {todo.title}
                                 </StyledTypography>
     

@@ -49,7 +49,7 @@ export const StyledTypography = styled(Typography)<IStyles>`
     margin-right: ${(props) => props.marginright}px;
     margin-bottom: ${(props) => props.marginbottom}px;
     color: ${(props) => props.maincolor};
-    text-decoration: ${(props) => props.textdecoration};
+    text-decoration: ${(props) => props.textDecoration};
 `
 
 export const GridItemDirection = styled(Grid).attrs({
@@ -72,7 +72,7 @@ export const StyledButton = styled(Button).attrs({
     margin-bottom: ${(props) => props.marginbottom}px;
     color: ${(props) => props.maincolor};
     background-color: ${(props) => props.backgroundcolor};
-    font-sive: ${(props) => props.fontsize};
+    font-sive: ${(props) => props.fontSize};
 
     &:hover{
         background-color: ${(props) => props.backgroundcolor};
