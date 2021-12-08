@@ -4,7 +4,7 @@ import ITodoInterface from '../../../interfaces/ITodoInterface'
 
 export async function getTodos() {
     let responseServer: ITodoInterface[] = [];
-    await TODO_API.get("/api/todo")
+    await TODO_API.get("/todos")
             .then((response) => responseServer = response.data)
             .catch(() => {});
     return responseServer;
@@ -17,7 +17,7 @@ export async function postTodo(todo: ITodoInterface, allTodos: ITodoInterface[])
         responseServer = allTodos;
         return responseServer;
     }
-    await TODO_API.post("/api/todo", todo)
+    await TODO_API.post("/todos", todo)
             .then((response) => {
                     responseServer = allTodos.concat(response.data);
                     }
@@ -31,7 +31,7 @@ export async function postTodo(todo: ITodoInterface, allTodos: ITodoInterface[])
 export async function changeTodo(todo:ITodoInterface, allTodos:ITodoInterface[]) {
     let responseServer: ITodoInterface[] = [];
     todo.status = todo.status === "Completed" ? "Uncompleted" : "Completed"
-    await TODO_API.put(`/api/todo/${todo.id}`, todo)
+    await TODO_API.put(`/todos/${todo.id}`, todo)
                 .then((response) => {
                     responseServer = allTodos.map((todo) => todo.id === response.data.id ? response.data : todo)
                 })
@@ -44,7 +44,7 @@ export async function changeTodo(todo:ITodoInterface, allTodos:ITodoInterface[])
 export async function removeTodo(id:number | undefined, allTodos:ITodoInterface[]) {
     let responseServer: ITodoInterface[] = [];
     if(typeof id === 'undefined') return allTodos;
-    await TODO_API.delete(`/api/todo/${id}`)
+    await TODO_API.delete(`/todos/${id}`)
                 .then((response) => {
                     responseServer = allTodos.filter((todo) => todo.id !== response.data.id);
                 })
